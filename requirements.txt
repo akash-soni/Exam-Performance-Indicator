@@ -1,9 +1,12 @@
 tqdm
-mlflow
 pandas
 numpy
 PyYAML
 seaborn
+matplotlib
 mkdocs-material
+scikit-learn
+mlflow
+
 ### local packages -
  -e . # << uncomment this to install from setup.py

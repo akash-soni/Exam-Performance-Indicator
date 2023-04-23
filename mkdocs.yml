@@ -3,7 +3,6 @@ site_name: My Docs
 # defeine TOC or order of website-
 nav:
   - Home: index.md
-  - Page1: Page01.md
 
 site_author: Akash soni
 site_description: >-

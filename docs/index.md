@@ -1,17 +1,10 @@
-# Welcome to MkDocs
+# Exam-Performance-Indicator
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## Problem Statement
 
-## Commands
+This project understands how the student's performance (test scores) is affected by other variables such as Gender, Ethnicity, Parental level of education, Lunch and Test preparation course.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## Data Collection
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Dataset Source - https://www.kaggle.com/datasets/spscientist/students-performance-in-exams?datasetId=74977
+The data consists of 8 column and 1000 rows.

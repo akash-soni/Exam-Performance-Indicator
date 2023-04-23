@@ -1,0 +1,9 @@
+tqdm
+mlflow
+pandas
+numpy
+PyYAML
+seaborn
+mkdocs-material
+### local packages -
+ -e . # << uncomment this to install from setup.py

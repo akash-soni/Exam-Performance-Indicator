@@ -131,3 +131,5 @@ dmypy.json
 
 .vscode/
 /notebook/catboost_info/
+/artifacts
+

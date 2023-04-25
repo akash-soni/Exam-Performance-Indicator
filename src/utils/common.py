@@ -1,26 +1,24 @@
 import os
-import yaml
-import logging
-import time
+import sys
+
+import numpy as np
 import pandas as pd
-import json
+import dill
+import pickle
+from sklearn.metrics import r2_score
+from sklearn.model_selection import GridSearchCV
+
+from src.exception import CustomException
 
 
-def read_yaml(path_to_yaml: str) -> dict:
-    with open(path_to_yaml) as yaml_file:
-        content = yaml.safe_load(yaml_file)
-    logging.info(f"yaml file: {path_to_yaml} loaded successfully")
-    return content
+def save_object(file_path, obj):
+    try:
+        dir_path = os.path.dirname(file_path)
 
+        os.makedirs(dir_path, exist_ok=True)
 
-def create_directories(path_to_directories: list) -> None:
-    for path in path_to_directories:
-        os.makedirs(path, exist_ok=True)
-        logging.info(f"created directory at: {path}")
+        with open(file_path, "wb") as file_obj:
+            pickle.dump(obj, file_obj)
 
-
-def save_json(path: str, data: dict) -> None:
-    with open(path, "w") as f:
-        json.dump(data, f, indent=4)
-
-    logging.info(f"json file saved at: {path}")
+    except Exception as e:
+        raise CustomException(e, sys)

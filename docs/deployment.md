@@ -1,6 +1,6 @@
 # Deployment using elasticbeanstalk
 
-## config for beanstalk
+## STEP 1 - config for beanstalk
 
 Create a directory .ebextensions inside create file python.config with code : -
 
@@ -11,11 +11,19 @@ option_settings:
 ```
 
 _application_ is the entry point of our application.
-Here we will copy app.py and rename it to appliaction.py just for deployement purpose
+Here we will rename it to appliaction.py just for deployement purpose
 
 **Note** also remove _debug=True_ option from application.py
 
-## Data Collection
+## STEP 2 - AWS setup
 
-Dataset Source - https://www.kaggle.com/datasets/spscientist/students-performance-in-exams?datasetId=74977
-The data consists of 8 column and 1000 rows.
+1. Login to AWS account
+2. Search for Elasic Beanstalk Service
+3. Elasic Beanstalk reqires configuration and our code is in github Repository.
+   We need to create a Pipeline so that code can go from repository to beanstalk even on any change
+   In order to create this we create **AWS codepipeline**, this pipeline is called **Continuous Delivery** pipeline.
+
+![DataSet directory](./img/deployment_process.jpg?raw=true "Dataset directory")
+
+4. Create EBS Application "exam-performance"
+5. Use AWS Codepipeline service to create a CD Pipeline

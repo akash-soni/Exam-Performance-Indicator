@@ -23,7 +23,7 @@ from src.utils.common import save_object, evaluate_models
 @dataclass
 class ModelTrainerConfig:
     # get input configuration for model training
-    trained_model_file_path = os.path.join("artifact", "model.pkl")
+    trained_model_file_path = os.path.join("artifacts", "model.pkl")
 
 
 class ModelTrainer:
@@ -119,7 +119,6 @@ class ModelTrainer:
 
             if best_model_score < 0.6:
                 raise CustomException("No best model found")
-
             logging.info(f"Best found model on both training and test dataset")
 
             # save the best model to the path
